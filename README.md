@@ -1,51 +1,51 @@
-# Windows Debloat — Guia Reutilizável
+# Windows Debloat — Reusable Guide
 
-Português | [English](README.en.md)
+[Português](README.pt.md) | English
 
-Guia completo e validado para remover bloat, telemetria e apps inúteis do Windows (10/11, Home ou Pro) **sem quebrar** drivers, hardware, jogos ou programas de trabalho — e totalmente reversível (backup CSV + ponto de restauração).
+A complete, validated guide to remove bloat, telemetry and useless apps from Windows (10/11, Home or Pro) **without breaking** drivers, hardware, games or work programs — and fully reversible (CSV backup + restore point).
 
-Funciona de **duas formas**:
+Works in **two ways**:
 
-- **Manual** (sem agente de IA): baixe `debloat.ps1` + `debloat.bat`, clique duas vezes e responda 4 perguntas. Para qualquer pessoa.
-- **Com agente de IA**: entregue o `Windows-Debloat-Guia-Reutilizável.md` a um agente de terminal (Hermes Agent, Claude Code, GitHub Copilot CLI, Cline, etc.) e ele executa detectando CPU/GPU e pedindo aprovação antes de cada ação.
+- **Manual** (no AI agent): download `debloat-en.ps1` + `debloat-en.bat`, double-click and answer 4 questions. For anyone.
+- **With an AI agent**: hand the `Windows-Debloat-Guide.en.md` to a terminal agent (Hermes Agent, Claude Code, GitHub Copilot CLI, Cline, etc.) and it runs, detecting CPU/GPU and asking for approval before each action.
 
-## Modo manual (sem agente de IA)
+## Manual mode (no AI agent)
 
-O jeito mais simples para quem não usa agente de IA:
+The simplest way for anyone who doesn't use an AI agent:
 
-1. Baixe `debloat.ps1` e `debloat.bat` **na mesma pasta**.
-2. **Clique duas vezes** em `debloat.bat` (ou clique com o botão direito em `debloat.ps1` → "Executar com PowerShell").
-3. Na janela de permissão do Windows (**UAC**), clique em **"Sim"**. Se o Windows Defender/SmartScreen avisar, clique em "Mais informações" → "Executar assim mesmo".
-4. Responda às **4 perguntas** com `S` ou `N`:
-   - Remover apps de jogo (Xbox app, Solitaire, Game Bar)?
-   - Remover o OneDrive?
-   - Remover a Microsoft Store?
-   - Desligar a atualização automática do Windows?
-5. O script cria **backup + ponto de restauração** antes de qualquer mudança, faz a limpeza e mostra um resumo no final.
-6. **Reinicie o computador** para concluir.
+1. Download `debloat-en.ps1` and `debloat-en.bat` **into the same folder**.
+2. **Double-click** `debloat-en.bat` (or right-click `debloat-en.ps1` → "Run with PowerShell").
+3. In the Windows permission window (**UAC**), click **"Yes"**. If Windows Defender/SmartScreen warns, click "More info" → "Run anyway".
+4. Answer the **4 questions** with `Y` or `N`:
+   - Remove preinstalled gaming apps (Xbox app, Solitaire, Game Bar)?
+   - Remove OneDrive?
+   - Remove the Microsoft Store?
+   - Disable automatic Windows updates?
+5. The script creates a **backup + restore point** before any change, does the cleanup and shows a summary at the end.
+6. **Restart the computer** to finish.
 
-O que ele faz (sempre): remove apps de bloat (Bing, Clipchamp, GetHelp, FeedbackHub, Widgets, etc.), desativa serviços de telemetria/diagnóstico, desativa o Recall/Copilot/Click-to-Do e limpa o cache do Windows Update. Os itens das 4 perguntas só acontecem se você responder `S`.
+What it does (always): removes bloat apps (Bing, Clipchamp, GetHelp, FeedbackHub, Widgets, etc.), disables telemetry/diagnostic services, disables Recall/Copilot/Click-to-Do and clears the Windows Update cache. The items in the 4 questions only happen if you answer `Y`.
 
-Nada é irreversível: o backup fica em `Documentos\windows-debloat-backup\` e há um ponto de restauração "Pre-debloat (manual)".
+Nothing is irreversible: the backup is in `Documents\windows-debloat-backup\` and there is a "Pre-debloat (manual)" restore point.
 
-## Modo com agente de IA
+## Mode with an AI agent
 
-1. Salve `Windows-Debloat-Guia-Reutilizável.md` em algum lugar fácil (Downloads ou Documentos).
-2. Abra seu assistente de IA **como Administrador**.
-3. Cole o bloco de instruções do topo do guia e siga — ele analisa, mostra um relatório e espera seu "sim" antes de mudar qualquer coisa.
+1. Save `Windows-Debloat-Guide.en.md` somewhere easy (Downloads or Documents).
+2. Open your AI assistant **as Administrator**.
+3. Paste the instruction block at the top of the guide and follow it — it analyzes, shows a report and waits for your "yes" before changing anything.
 
-## Resultados (na minha máquina)
+## Results (on my machine)
 
-ThinkPad · Windows 11 Pro · 32 GB RAM — sessão de 2026-10-18:
+ThinkPad · Windows 11 Pro · 32 GB RAM — session of 2026-10-18:
 
-- **29 apps** removidos (UWP) — de 125 para 96
-- **20 serviços** desativados (telemetria, diagnóstico, Xbox Live cloud, NFC/pagamento/mensagem, host de IA)
-- **OneDrive** removido (app + auto-start)
-- **2,8 GB** de cache do Windows Update liberados
-- Pilha de IA desativada (Recall/Copilot/Click-to-Do) + Copilot desligado + update automático desligado
+- **29 apps** removed (UWP) — from 125 to 96
+- **20 services** disabled (telemetry, diagnostics, Xbox Live cloud, NFC/payment/messaging, AI host)
+- **OneDrive** removed (app + auto-start)
+- **2.8 GB** of Windows Update cache freed
+- AI stack disabled (Recall/Copilot/Click-to-Do) + Copilot off + automatic updates off
 
-Estado após o debloat: 203 processos · 114 serviços rodando · 7,6 GB de 31,7 GB de RAM em uso.
+State after debloat: 203 processes · 114 services running · 7.6 GB of 31.7 GB RAM in use.
 
-## Aviso
+## Warning
 
-Mexer em serviços e apps do sistema tem risco. O guia e o script foram validados em 2 máquinas (ThinkPad Intel/Win11 Pro e desktop AMD + RTX 3060/Win11 Home) e são reversíveis (backup CSV + ponto de restauração), mas use por sua conta e risco. No modo com agente, revise cada item do relatório antes de aprovar.
+Touching system services and apps carries risk. The guide and the script were validated on 2 machines (ThinkPad Intel/Win11 Pro and desktop AMD + RTX 3060/Win11 Home) and are reversible (CSV backup + restore point), but use at your own risk. In agent mode, review each item of the report before approving.
