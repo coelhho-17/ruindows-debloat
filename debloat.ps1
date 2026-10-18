@@ -58,14 +58,11 @@ $removerOneDrive = Ask "Remover o OneDrive (sincronizacao de arquivos da Microso
 $removerStore    = Ask "Remover a Microsoft Store (loja de apps)?"
 $desligarUpdate  = Ask "Desligar a atualizacao automatica do Windows?"
 
-Write-Host ""
-Write-Host "Atencao: voce respondeu 'S' para desligar atualizacao automatica." -ForegroundColor Yellow -NoNewline
 if ($desligarUpdate) {
-    Write-Host " Isso deixa de instalar correcoes de seguranca sozinho. Cheque manualmente de tempos em tempos." -ForegroundColor Yellow
-} else {
-    Write-Host "" -NoNewline
+    Write-Host ""
+    Write-Host "Atencao: atualizacao automatica desligada. Isso deixa de instalar correcoes de seguranca sozinho - cheque manualmente de tempos em tempos." -ForegroundColor Yellow
+    Write-Host ""
 }
-Write-Host ""
 
 try {
 
