@@ -1,5 +1,7 @@
 # Windows Debloat — Guia Reutilizável (qualquer agente de terminal)
 
+> **Sem agente de IA?** Use o modo manual: baixe `debloat.ps1` + `debloat.bat` do repositório e siga a seção "Modo manual" do README. Este guia abaixo é para quando você usa um agente de IA.
+
 ---
 
 ## COMO USAR (3 passos)
