@@ -1,5 +1,7 @@
 # Windows Debloat — Guia Reutilizável
 
+Português | [English](README.en.md)
+
 Guia completo e validado para remover bloat, telemetria e apps inúteis do Windows (10/11, Home ou Pro) **sem quebrar** drivers, hardware, jogos ou programas de trabalho — e totalmente reversível (backup CSV + ponto de restauração).
 
 Funciona de **duas formas**:
