@@ -6,15 +6,15 @@ Guia completo e validado para remover bloat, telemetria e apps inúteis do Windo
 
 Funciona de **duas formas**:
 
-- **Manual** (sem agente de IA): baixe `debloat.ps1` + `debloat.bat`, clique duas vezes e responda 4 perguntas. Para qualquer pessoa.
+- **Manual** (sem agente de IA): baixe `debloat.ps1` + `debloat.bat`, clique com o botão direito no `.bat` → "Executar como administrador" e responda 4 perguntas. Para qualquer pessoa.
 - **Com agente de IA**: entregue o `Windows-Debloat-Guia-Reutilizável.md` a um agente de terminal (Hermes Agent, Claude Code, GitHub Copilot CLI, Cline, etc.) e ele executa detectando CPU/GPU e pedindo aprovação antes de cada ação.
 
 ## Modo manual (sem agente de IA)
 
 O jeito mais simples para quem não usa agente de IA:
 
-1. Baixe `debloat.ps1` e `debloat.bat` **na mesma pasta**.
-2. **Clique duas vezes** em `debloat.bat` (ou clique com o botão direito em `debloat.ps1` → "Executar com PowerShell").
+1. Baixe `debloat.ps1` **e** `debloat.bat` **na mesma pasta** — precisa dos dois; só o `.bat` não funciona.
+2. **Clique com o botão direito** em `debloat.bat` → **"Executar como administrador"**. No Windows 11, se a opção não aparecer direto, use "Mostrar mais opções" → "Executar como administrador". (Clicar duas vezes pode não elevar as permissões e o script não roda.)
 3. Na janela de permissão do Windows (**UAC**), clique em **"Sim"**. Se o Windows Defender/SmartScreen avisar, clique em "Mais informações" → "Executar assim mesmo".
 4. Responda às **4 perguntas** com `S` ou `N`:
    - Remover apps de jogo (Xbox app, Solitaire, Game Bar)?

@@ -6,15 +6,15 @@ A complete, validated guide to remove bloat, telemetry and useless apps from Win
 
 Works in **two ways**:
 
-- **Manual** (no AI agent): download `debloat-en.ps1` + `debloat-en.bat`, double-click and answer 4 questions. For anyone.
+- **Manual** (no AI agent): download `debloat-en.ps1` + `debloat-en.bat`, right-click the `.bat` → "Run as administrator" and answer 4 questions. For anyone.
 - **With an AI agent**: hand the `Windows-Debloat-Guide.en.md` to a terminal agent (Hermes Agent, Claude Code, GitHub Copilot CLI, Cline, etc.) and it runs, detecting CPU/GPU and asking for approval before each action.
 
 ## Manual mode (no AI agent)
 
 The simplest way for anyone who doesn't use an AI agent:
 
-1. Download `debloat-en.ps1` and `debloat-en.bat` **into the same folder**.
-2. **Double-click** `debloat-en.bat` (or right-click `debloat-en.ps1` → "Run with PowerShell").
+1. Download **both** `debloat-en.ps1` and `debloat-en.bat` **into the same folder** — you need both; the `.bat` alone won't work.
+2. **Right-click** `debloat-en.bat` → **"Run as administrator"**. On Windows 11, if it isn't shown directly, use "Show more options" → "Run as administrator". (Double-clicking may not elevate and the script won't run.)
 3. In the Windows permission window (**UAC**), click **"Yes"**. If Windows Defender/SmartScreen warns, click "More info" → "Run anyway".
 4. Answer the **4 questions** with `Y` or `N`:
    - Remove preinstalled gaming apps (Xbox app, Solitaire, Game Bar)?
