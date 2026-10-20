@@ -1,6 +1,6 @@
 # Windows Debloat — Reusable Guide (any terminal agent)
 
-> **No AI agent?** Use the manual mode: download `debloat-en.ps1` + `debloat-en.bat` from the repository and follow the "Manual mode" section of the README. This guide below is for when you use an AI agent.
+> **No AI agent?** Use the manual mode: download `debloat-en.ps1` + `debloat-en.bat` from the repository **into the same folder** and **right-click** `debloat-en.bat` → **"Run as administrator"** (don't double-click). This guide below is for when you use an AI agent.
 
 ---
 
